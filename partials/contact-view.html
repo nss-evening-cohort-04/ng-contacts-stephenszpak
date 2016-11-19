@@ -1,0 +1,17 @@
+      <div id="page-content-wrapper">
+        <div class="container-fluid">
+          <div class="row">
+            <h3 class="side-contact">Info</h3>
+            <div class="col-lg-12">
+              <div>Name: {{selectedContact.name}}</div>
+              <div>PHone: {{selectedContact.phone}}</div>
+              <div>Email: {{selectedContact.email}}</div>
+              <div>Address: {{selectedContact.address}}</div>
+              <div>City/State: {{selectedContact.citystate}}</div>
+              <div>Url: {{selectedContact.url}}</div>
+              <div>Social: {{selectedContact.social}}</div>
+            </div>
+          </div>
+        </div>
+        <button class="btn btn-info"><a ng-href="#/contacts/edit/{{selectedContact.id}}">Edit</a></button>
+      </div>

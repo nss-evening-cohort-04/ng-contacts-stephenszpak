@@ -9,86 +9,44 @@
     <link rel="stylesheet" href="styles/main.css">
   </head>
   <body ng-app="ContactApp">
-    <div ng-controller="ContactCtrl">
-    <div id="wrapper">
-      <div id="sidebar-wrapper">
-        <ul class="sidebar-nav">
-          <li class="sidebar-brand">
-            CONTACRTZ<button type="button" class="btn btn-primary" data-toggle="modal" data-target=".bs-example-modal-lg"><i class="fa fa-plus" aria-hidden="true"></i></button>
-          </li>
-          <li>
-            <address ng-repeat="contact in contacts">
-              <strong><a href="#">{{contact.name}}</a></strong>
-              <span>{{contact.phone}}</span>
-            </address>
-          </li>
-        </ul>
-      </div>
-      <div id="page-content-wrapper">
-        <div class="container-fluid">
-          <div class="row">
-            <div class="col-lg-12 side-contact" ng-repeat="contact in contacts">
-              <div>Name: {{contact.name}}</div>
-              <div>PHone: {{contact.phone}}</div>
-              <div>Email: {{contact.email}}</div>
-              <div>Address: {{contact.address}}</div>
-              <div>City/State: {{contact.citystate}}</div>
-              <div>Url: {{contact.url}}</div>
-              <div>Social: {{contact.social}}</div>
-              <div><button class="btn btn-danger fa fa-trash-o"></button></div>
+    <nav class="navbar navbar-default" ng-controller="NavCtrl">
+            <div class="container-fluid">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="#">Contacts</a>
+                </div>
+                <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                    <ul class="nav navbar-nav navbar-right" ng-repeat="thingy in navItems">
+                        <li><a href="{{thingy.url}}">{{thingy.name}}</a></li>
+                    </ul>
+                </div>
             </div>
-          </div>
+        </nav>
+        <div class="row">
+            <div class="col-xs-offset-2 col-xs-8" ng-view></div>
         </div>
-      </div>
-    </div>
-    <div class="modal fade bs-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel">
-    <div class="modal-dialog modal-lg" role="document">
-      <div class="modal-content">
-        <form>
-        <div class="form-group">
-          <label>Name</label>
-          <input type="text" class="form-control" placeholder="First, Last" ng-model="newContact.name">
-        </div>
-        <div class="form-group">
-          <label>Phone</label>
-          <input type="text" class="form-control" placeholder="Phone" ng-model="newContact.phone">
-        </div>
-        <div class="form-group">
-          <label>E-Mail</label>
-          <input type="text" class="form-control" placeholder="E-Mail" ng-model="newContact.email">
-        </div>
-        <div class="form-group">
-          <label>Address</label>
-          <input type="text" class="form-control" placeholder="Address" ng-model="newContact.address">   
-        </div>
-        <div class="form-group">
-          <label>City/State</label>
-          <input type="text" class="form-control" placeholder="City, State" ng-model="newContact.citystate">   
-        </div>
-        <div class="form-group">
-          <label>Website</label>
-          <input type="text" class="form-control" placeholder="Website" ng-model="newContact.url">    
-        </div>
-        <div class="form-group">
-          <label>Social</label>
-          <input type="text" class="form-control" placeholder="Social" ng-model="newContact.social">   
-        </div>
-        <div class="modal-footer">
-          <button type="button" class="btn btn-danger" data-dismiss="modal">Cancel</button>
-          <button type="button" class="btn btn-primary" ng-click="addContact()" data-dismiss="modal">Add Contact</button>
-        </div>
-        </form>
-      </div>
-    </div>
+
+
+    
     <script src="https://www.gstatic.com/firebasejs/3.6.1/firebase.js"></script>
     <script type="text/javascript" src="/lib/bower_components/jquery/dist/jquery.min.js"></script>
     <script type="text/javascript" src="/lib/bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
     <script type="text/javascript" src="/lib/bower_components/angular/angular.min.js"></script>
+    <script type="text/javascript" src="/lib/bower_components/angular-route/angular-route.min.js"></script>
     <script type="text/javascript" src="/javascripts/app.js"></script>
     <script type="text/javascript" src="/javascripts/AppConstants.js"></script>
     <script type="text/javascript" src="/javascripts/AppConfig.js"></script>
     <script type="text/javascript" src="/javascripts/factories/ContactFactory.js"></script>
     <script type="text/javascript" src="/javascripts/controllers/NavCtrl.js"></script>
-    <script type="text/javascript" src="/javascripts/controllers/ContactCtrl.js"></script>
+    <script type="text/javascript" src="/javascripts/controllers/ContactListCtrl.js"></script>
+    <script type="text/javascript" src="/javascripts/controllers/ContactNewCtrl.js"></script>
+    <script type="text/javascript" src="/javascripts/controllers/ContactViewCtrl.js"></script>
+    <script type="text/javascript" src="/javascripts/controllers/ContactEditCtrl.js"></script>
+
   </body>
 </html>
