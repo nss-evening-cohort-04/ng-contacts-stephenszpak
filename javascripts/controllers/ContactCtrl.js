@@ -15,7 +15,6 @@ app.controller("ContactCtrl", function($scope, ContactFactory){
 
 	gContacts();
 
-	console.log("contacts", $scope.contacts);
 		$scope.contactList = function() {
 			$scope.showHide = true;
 		};
