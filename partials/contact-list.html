@@ -1,17 +1,14 @@
-
-<div id="wrapper">
-  <div id="sidebar-wrapper">
-    <ul class="sidebar-nav">
-      <li class="side-contact sidebar-brand">
-        CONTACRTZ<button type="button" class="btn btn-primary" data-toggle="modal" data-target=".bs-example-modal-lg"><i class="fa fa-plus" aria-hidden="true"></i></button>
-      </li>
-      <li>
-        <address ng-repeat="contact in contacts">
-          <strong><a href="#/contacts/view/{{contact.id}}">{{contact.name}}</a></strong>
-          <span>{{contact.phone}}</span>
+<div class="col-xs-5 panel-body">
+  <ul class="list-group">
+    <li class="list-group-item"> <h4>Contacts:</h4>
+      <input class="form-control" placeholder="Seach Your Contacts" type="text" ng-model="searchText">
+      <contact class="list-group-item" ng-repeat="contact in contacts | filter: searchText ">
+        <div>
+          <img src="images/borat.jpg" alt="nevermind">
           <span><button class="btn btn-danger fa fa-trash-o" ng-click="deleteContact(contact.id)"></button></span>
-        </address>
-      </li>
-    </ul>
-  </div>
+        </div>
+        <strong class="heyo"><a href="#/contacts/view/{{contact.id}}">{{contact.name}}</a></strong>
+      </contact>
+    </li>
+  </ul> 
 </div>

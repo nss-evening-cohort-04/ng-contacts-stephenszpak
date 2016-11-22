@@ -30,7 +30,8 @@ app.factory("ContactFactory", function($q, $http, FIREBASE_CONFIG) {
 					url: newContact.url,
 					social: newContact.social,
 					address: newContact.address,
-					citystate: newContact.citystate
+					citystate: newContact.citystate,
+					notes: newContact.notes
 				})
 			)
 			.success(function(postResponse) {
