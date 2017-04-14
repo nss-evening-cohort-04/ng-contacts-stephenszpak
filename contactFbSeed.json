@@ -1,0 +1,47 @@
+{
+	"contacts": {
+		"contact1": {
+			"name": "Billy Durbs",
+			"phone": "888-888-8888",
+			"email": "blah@blah.com",
+			"url": "www.hollaa.com",
+			"social": "www.myspace.com",
+			"address": "23 holla dr.",
+			"citystate": "Nashville, TN",
+			"notes": "Blahblasdfuhdsifuhsduifhj usadhfhds sdlfhslahfb",
+			"uid": "Qr5HqYXjPJSNcF0eDjtMK2aE6H42"
+		},
+		"contact2": {
+			"name": "Butts Magavin",
+			"phone": "888-888-8888",
+			"email": "blah@blah.com",
+			"url": "www.blah.com",
+			"social": "www.facebook.com",
+			"address": "30587 dog ave.",
+			"citystate": "Nashville, TN",
+			"notes": "Blahblasdfuhdsifuhsduifhj usadhfhds sdlfhslahfb",
+			"uid": "Qr5HqYXjPJSNcF0eDjtMK2aE6H42"
+		},
+		"contact3": {
+			"name": "DURRRRRR hah",
+			"phone": "888-888-8888",
+			"email": "blah@blah.com",
+			"url": "www.asdfhsad.com",
+			"social": "www.facebook.com",
+			"address": "24873 hello dr.",
+			"citystate": "Nashville, TN",
+			"notes": "Blahblasdfuhdsifuhsduifhj usadhfhds sdlfhslahfb",
+			"uid": "ZTvSKrRkFTT52tRuVQgy85ItAb42"
+		}
+	},
+	"users": {
+		"user1": {
+			"uid": "ZTvSKrRkFTT52tRuVQgy85ItAb42",
+			"username": "a"
+		},
+		"user2": {
+			"uid": "Qr5HqYXjPJSNcF0eDjtMK2aE6H42",
+			"username": "b"
+		}
+	}
+}

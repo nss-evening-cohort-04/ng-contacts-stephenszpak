@@ -1,0 +1,13 @@
+<div class="list-group-item">
+        <h3 class="text-center">{{selectedContact.name}}</h3>
+        <img src="images/borat.jpg" alt="nevermind">
+        <p>email: <a ng-href="{{selectedContact.email}}">{{selectedContact.email}}</a></p>
+        <p>phone: {{selectedContact.phone}}</p>
+        <p>address: {{selectedContact.address}}</p>
+        <p>City/State: {{selectedContact.citystate}}</p>
+        <p>url: <a ng-href="{{selectedContact.url}}">{{selectedContact.url}}</a></p>
+        <p>social: <a ng-href="{{selectedContact.social}}"> {{selectedContact.social}}</p>
+        <p>Notes:</p>
+        <p class="well well-lg">{{selectedContact.notes}}</p>
+        <a ng-href="#/contacts/edit/{{selectedContact.id}}"><button class="btn btn-info">Edit</button></a>
+      </div>
